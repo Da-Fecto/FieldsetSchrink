@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Fieldset Shrink
+ * FieldsetShrink
  *
  * Removes label, padding & border from all fieldsets.
  * 
@@ -14,7 +14,7 @@
  *
  */
 
-class FieldsetSchrink extends WireData implements Module {
+class FieldsetShrink extends WireData implements Module {
 
 	public static function getModuleInfo() {
 		return array(
@@ -32,6 +32,6 @@ class FieldsetSchrink extends WireData implements Module {
 	}
 
 	public function shrinkFieldsets(){
-		$this->config->styles->add($this->config->urls->FieldsetSchrink . "FieldsetSchrink.css");
+		$this->config->styles->add($this->config->urls->FieldsetShrink . "FieldsetShrink.css");
 	}
 }
