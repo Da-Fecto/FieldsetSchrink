@@ -1,0 +1,8 @@
+.Inputfields .InputfieldFieldsetOpen > label {
+	display: none;
+}
+
+.Inputfields .Inputfield.InputfieldFieldsetOpen > .ui-widget-content {
+	border: 0;
+	padding: 0;
+}

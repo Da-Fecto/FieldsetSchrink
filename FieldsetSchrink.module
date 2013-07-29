@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Fieldset Shrink
+ *
+ * Removes label, padding & border from all fieldsets.
+ * 
+ * ©2013 Martijn Geerts
+ *
+ * ProcessWire 2.x 
+ * Copyright (C) 2011 by Ryan Cramer 
+ * Licensed under GNU/GPL v2, see LICENSE.TXT
+ * 
+ *
+ */
+
+class FieldsetSchrink extends WireData implements Module {
+
+	public static function getModuleInfo() {
+		return array(
+			'title' => 'FieldsetSchrink',
+			'version' => 001,
+			'summary' => 'Removes label, padding & border from all fieldsets.',
+			'href' => '',
+			'singular' => true,
+			'autoload' => true,
+		);
+	}
+
+	public function init() {
+		$this->addHookAfter('ProcessPageEdit::execute', $this, 'shrinkFieldsets');
+	}
+
+	public function shrinkFieldsets(){
+		$this->config->styles->add($this->config->urls->FieldsetSchrink . "FieldsetSchrink.css");
+	}
+}
